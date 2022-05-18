@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "username": "admin",
+        "password": "pass123",
+        "type": "admin"
+    },
+    {
+        "id": 2,
+        "username": "palani",
+        "password": "pass123",
+        "type": "seller"
+    },
+    {
+        "id": 3,
+        "username": "peter",
+        "password": "pass123",
+        "type": "customer"
+    },
+    {
+        "id": 4,
+        "username": "seller",
+        "password": "pass321",
+        "type": "seller"
+    },
+    {
+        "id": 5,
+        "username": "buyer",
+        "password": "pass321",
+        "type": "customer"
+    }
+]

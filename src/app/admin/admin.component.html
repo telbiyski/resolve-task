@@ -1,0 +1,42 @@
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <div class="p-3 mb-2 bg-secondary text-white text-center">
+            TOP 10 Sellers
+        </div>
+        <canvas
+            baseChart
+            [data]="pieChartData"
+            [type]="pieChartType"
+            [options]="pieChartOptions"
+            [plugins]="pieChartPlugins"
+        >
+        </canvas>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 mb-2 bg-secondary text-white text-center">
+            TOP 10 Buyers
+        </div>
+        <canvas
+            baseChart
+            [data]="pieChartData2"
+            [type]="pieChartType"
+            [options]="pieChartOptions"
+            [plugins]="pieChartPlugins"
+        >
+        </canvas>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 mb-2 bg-secondary text-white text-center">
+            TOP 10 Items Sold Today
+        </div>
+        <canvas
+            baseChart
+            [data]="pieChartData3"
+            [type]="pieChartType"
+            [options]="pieChartOptions"
+            [plugins]="pieChartPlugins"
+        >
+        </canvas>
+    </div>
+</div>

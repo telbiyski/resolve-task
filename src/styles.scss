@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+
+.chart {
+    position: fixed;
+    width: 300px;
+    left: 5%;
+    top: 10%;
+}
+
+.products {
+    height: 700px;
+}
+
+.product {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 20%;
+    max-width: 20%;
+    height: 310px;
+    font-size: 14px;
+    color: #777;
+    transition: transform 0.3s;
+
+    .card {
+        height: 310px;
+
+        .card-title {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 16px;
+        }
+
+        .card-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 65px;
+        }
+
+        img {
+            height: 100px;
+        }
+
+        .price {
+            margin-top: 50px;
+            font-weight: bold;
+        }
+    }
+
+    &:hover {
+        color: #000;
+        text-decoration: none;
+        transform: scale(1.1);
+
+        .card {
+            box-shadow: 0 0 10px #ddd;
+        }
+    }
+}

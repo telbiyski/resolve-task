@@ -1,0 +1,61 @@
+<br />
+<br />
+<h4>My Products</h4>
+<br />
+<div class="row products" *ngIf="products">
+    <a
+        href="#"
+        class="product"
+        [routerLink]="['/product/', product.id]"
+        *ngFor="let product of products"
+    >
+        <div class="card">
+            <img
+                *ngIf="product.thumbnail"
+                class="card-img-top"
+                src="{{ product.thumbnail }}"
+                alt="Card image cap"
+            />
+            <div class="card-body">
+                <h5 class="card-title">{{ product.title }}</h5>
+                <p class="card-text">
+                    {{ product.description }}
+                </p>
+                <p class="price">$ {{ product.price }}</p>
+            </div>
+        </div>
+    </a>
+    <div
+        class="col-md-12 align-self-center text-center"
+        *ngIf="products.length === 0"
+    >
+        No products found.
+    </div>
+</div>
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+    <div class="btn-group mr-2" role="group" aria-label="First group">
+        <button
+            class="btn btn-secondary"
+            type="button"
+            [disabled]="page === 0"
+            (click)="pageChange('prev')"
+        >
+            Prev
+        </button>
+        <button
+            type="button"
+            class="btn btn-outline-secondary"
+            [disabled]="true"
+        >
+            {{ page + 1 }}
+        </button>
+        <button
+            class="btn btn-secondary"
+            type="button"
+            [disabled]="products.length === 0 || products.length < 10"
+            (click)="pageChange('next')"
+        >
+            Next
+        </button>
+    </div>
+</div>

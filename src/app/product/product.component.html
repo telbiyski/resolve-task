@@ -1,0 +1,73 @@
+<div class="single_product" *ngIf="product">
+    <div class="row">
+        <div class="col-lg-2 order-lg-1 order-2">
+            <ul class="image_list">
+                <li *ngFor="let image of product.images">
+                    <img src="{{ image }}" alt="" />
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-4 order-lg-2 order-1">
+            <div class="image_selected">
+                <img src="{{ product.thumbnail }}" alt="" />
+            </div>
+        </div>
+        <div class="col-lg-6 order-3">
+            <div class="product_description">
+                <div class="product_name">
+                    {{ product.title }}
+                </div>
+                <div class="product-rating">
+                    <span class="badge badge-success"
+                        ><i class="fa fa-star"></i>
+                        {{ product.rating }} Star</span
+                    >
+                    <span class="rating-review">
+                        {{ product.stock }} in Stock</span
+                    >
+                </div>
+                <div>
+                    <span class="product_price">$ {{ product.price }}</span>
+                    <s class="product_discount">
+                        <span style="color: black"
+                            >{{ product.discountPercentage }}%</span
+                        >
+                    </s>
+                </div>
+                <hr class="singleline" />
+                <div>
+                    {{ product.description }}
+                </div>
+                <hr class="singleline" />
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="product_quantity">
+                            <span>QTY: </span>
+                            <input
+                                id="quantity_input"
+                                type="number"
+                                pattern="[0-9]*"
+                                value="1"
+                            />
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <button
+                            type="button"
+                            class="btn btn-primary shop-button"
+                            style="margin-right: 10px"
+                        >
+                            Add to Cart
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-success shop-button"
+                        >
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
